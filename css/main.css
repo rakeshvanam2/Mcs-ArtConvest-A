@@ -1,57 +1,104 @@
+/* Reset default styles for all elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Enable smooth scrolling for HTML elements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set the background color for the body */
+.body {
+  background-color: #c27979;
+}
+
+/* Center align content vertically and horizontally */
+.positionCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center align content horizontally within the button */
+#btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* Media Queries */
+
+/* For Phones and Small Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Adjust the height of #heroSection to fit the viewport */
+  #heroSection {
+    height: 100vh;
   }
+}
+
+/* For Medium Screens and Tablets (min-width: 768px) */
+@media screen and (min-width: 768px) {
+  /* Increase padding for #heroSection and #features */
+  #heroSection,
+  #features {
+    padding: 90px;
+  }
+}
+
+/* For Laptops and Large Screens (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+  /* Further increase padding for #heroSection and #features */
+  #heroSection,
+  #features {
+    padding: 150px;
+  }
+}
+
+/* For Extra Large Screens (min-width: 1528px) */
+@media screen and (min-width: 1528px) {
+  /* Keep the same padding as for large screens */
+  #heroSection,
+  #features {
+    padding: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Styles for screens that are at least 768px wide (tablets and desktops) */
+  .content {
+      margin-left: 500px;
+  }
+}
+.content {
+  width: 50%;
+  /* Other styles here */
+}
+
+
+@media (max-width: 767px) {
+  /* Styles for screens that are 767px wide or less (mobile screens) */
+  .content {
+      margin-left: 0;
+      width: 90%;
+      margin: 0 auto;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1;
+  gap:1rem;
+}
+.grid p2 {
+  list-style-type: none;
+}
+@media screen and (min-width:760px){
+  .grid {
+    gap:2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
   
-  html {
-    scroll-behavior: smooth;
-  }
-  .body {
-    background-color: #c27979;
-  }
-  
-  .positionCenter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #btn {
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Media Queries */
-  /* Phones and Small Screens */
-  @media screen and (max-width: 768px) {
-    #heroSection {
-      height: 100vh;
-    }
-  }
-  
-  /* Medium Screens and Tablets */
-  @media screen and (min-width: 768px) {
-    #heroSection,
-    #features {
-      padding: 90px;
-    }
-  }
-  
-  /* Laptops and Large Screens */
-  @media screen and (min-width: 1200px) {
-    #heroSection,
-    #features {
-      padding: 150px;
-    }
-  }
-  
-  /* Extra Large Screens */
-  @media screen and (min-width: 1528px) {
-    #heroSection,
-    #features {
-      padding: 150px;
-    }
-  }
-  
+
